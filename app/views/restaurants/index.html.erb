@@ -3,3 +3,5 @@
 <% @restaurants.each do |r| %>
   <div class="card mb-4 p-4 rounded"><%= link_to r.name, restaurant_path(r) %></div>
 <% end %>
+
+<%= link_to "Add a Restaurant", new_restaurant_path, class:"btn btn-primary" %>
