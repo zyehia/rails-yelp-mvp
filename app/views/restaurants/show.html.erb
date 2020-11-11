@@ -1,0 +1,7 @@
+<h1>Reviews for <%= @restaurant.name %></h1>
+
+<% @reviews.each do |review| %>
+  <div class="card mb-4 p-4">
+    <%= "⭐" * review.rating %><%= review.content %>
+  </div>
+<% end %>

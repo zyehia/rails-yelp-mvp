@@ -1,0 +1,5 @@
+<h1>Restaurants</h1>
+
+<% @restaurants.each do |r| %>
+  <div class="card mb-4 p-4 rounded"><%= link_to r.name, restaurant_path(r) %></div>
+<% end %>

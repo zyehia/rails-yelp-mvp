@@ -10,4 +10,8 @@
                         address: "#{Faker::Address.unique.street_address}, #{Faker::Address.city}, #{Faker::Address.postcode}",
                         category: ["chinese", "italian", "japanese", "french", "belgian"].sample,
                         phone_number: Faker::PhoneNumber.cell_phone)
+
+  5.times do 
+    Review.create(rating: (0..5).to_a.sample, content: Faker::Lorem.sentences(number:5).join(" "), restaurant: restaurant)
+  end
 end
